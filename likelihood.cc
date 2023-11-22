@@ -49,6 +49,7 @@ int main() {
     }
     double lambda = - 2.0 * log(prob(daten, given_mu)/probWithK(daten));
     double z_value = lambda-chiDOF/sqrt(2*chiDOF);
+    std::cout << prob(daten,given_mu) <<std::endl;
     std::cout << lambda <<std::endl;
     fin.close();
     fout.close();
