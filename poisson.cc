@@ -25,7 +25,7 @@ int main() {
     for ( unsigned int k = 0 ; k < zaehler.size (); ++ k ) {
         std::cout << k << " : " << zaehler[k] << std::endl;
         double poisson_value = poisson(mu_value,k);
-        int output_poisson = number_events * poisson_value + 0.5;
+        double output_poisson = number_events * poisson_value;
         fout << k << " " << zaehler[k] << std::endl;
         fout2 << k << " " << zaehler[k] << " " << output_poisson << std::endl;
     }    
