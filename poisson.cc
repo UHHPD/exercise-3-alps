@@ -15,7 +15,7 @@ int main() {
     vector<int> zaehler(11);
 
     ifstream fin("datensumme.txt");
-    oftream fout2("hist.txt");
+    ofstream fout2("hist.txt");
     ofstream fout("histpoi.txt");
     int n_i;
     for(int i = 0 ; i < 234 ; ++i) {
