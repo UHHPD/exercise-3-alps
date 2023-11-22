@@ -15,6 +15,7 @@ int main() {
     vector<int> zaehler(11);
 
     ifstream fin("datensumme.txt");
+    oftream fout2("hist.txt");
     ofstream fout("histpoi.txt");
     int n_i;
     for(int i = 0 ; i < 234 ; ++i) {
@@ -24,6 +25,7 @@ int main() {
     for ( unsigned int k = 0 ; k < zaehler.size (); ++ k ) {
         double poisson_value = poisson(mu_value,k);
         int output_poisson = number_events * poisson_value + 0.5;
+        fout2 << k << " " << zaehler[k] << std::endl;
         fout << k << " " << zaehler[k] << " " << output_poisson << std::endl;
     }    
     fin.close();
