@@ -30,7 +30,7 @@ int main() {
         daten.push_back(n_i);
     }
     double test = prob(daten, given_mu);
-    for(int mu = 0; mu < 7; ++mu){
+    for(int mu = 0; mu < 6.1; mu+=0.1){
         double mu_probablity = prob(daten, mu);
         double mu_log = - 2.0 * log(prob(daten,mu));
         fout << mu << " " << mu_probablity << std::endl;
