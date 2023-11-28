@@ -48,9 +48,10 @@ int main() {
         fout3 << mu << " " << mu_log + 2.0 * log(prob(daten,given_mu))  << std::endl;
     }
     double lambda = - 2.0 * log(prob(daten, given_mu)/probWithK(daten));
-    double z_value = lambda-chiDOF/sqrt(2*chiDOF);
+    double z_value = (lambda-chiDOF)/sqrt(2*chiDOF);
     std::cout << prob(daten,given_mu) <<std::endl;
     std::cout << lambda <<std::endl;
+    std::cout << "z:" << z_value << std::endl;
     fin.close();
     fout.close();
     fout2.close();
